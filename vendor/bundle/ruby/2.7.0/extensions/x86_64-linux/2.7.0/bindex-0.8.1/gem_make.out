@@ -1,0 +1,15 @@
+current directory: /home/yen/stock-app/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+/home/yen/.asdf/installs/ruby/2.7.2/bin/ruby -I /home/yen/.asdf/installs/ruby/2.7.2/lib/ruby/2.7.0 -r ./siteconf20210621-1032-1l97gwj.rb extconf.rb
+creating Makefile
+
+current directory: /home/yen/stock-app/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/yen/stock-app/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/yen/stock-app/vendor/bundle/ruby/2.7.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20210621-1032-1wt5gt9/skiptrace/internal

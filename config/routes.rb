@@ -8,4 +8,8 @@ Rails.application.routes.draw do
   get 'dashboard_broker', to: 'sessions#index_broker'
   get 'dashboard_admin', to: 'sessions#index_admin'
   get 'logout', to: 'sessions#out'
+
+  resources :stocks
+  get 'search-stock', to: 'stocks#search'
+
 end

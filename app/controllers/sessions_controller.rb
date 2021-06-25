@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :authorized, only: %i[new create welcome]
+  before_action :fetch_api, only: %i[index_buyer]
 
   def new; end
 
@@ -31,7 +32,7 @@ class SessionsController < ApplicationController
 
   def index_buyer
     if logged_in?
-      # code
+      @stock = @client.stock_market_list(:mostactive)
     else
       redirect_to root_path
     end
@@ -74,5 +75,15 @@ class SessionsController < ApplicationController
   def out
     session[:user_id] = nil
     redirect_to root_path
+  end
+
+  private
+
+  def fetch_api
+    @client = IEX::Api::Client.new(
+      publishable_token: ENV['PUBLISH'],
+      secret_token: ENV['SECRET'],
+      endpoint: 'https://sandbox.iexapis.com/v1'
+    )
   end
 end
