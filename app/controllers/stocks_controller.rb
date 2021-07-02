@@ -17,8 +17,8 @@ class StocksController < ApplicationController
   def update_stock
     Stock.delete_all
     client = IEX::Api::Client.new(
-      publishable_token: ENV['PUBLISH_ACCESS_KEY'],
-      secret_token: ENV['SECRET_ACCESS_KEY'],
+      publishable_token: Rails.application.credentials.iex_client[:publish_access_key],
+      secret_token: Rails.application.credentials.iex_client[:secret_access_key],
       endpoint: 'https://sandbox.iexapis.com/v1'
     )
     symbols = client.ref_data_symbols
