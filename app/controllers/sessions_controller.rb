@@ -64,7 +64,7 @@ class SessionsController < ApplicationController
 
   def approve
     users = User.find_by(id: params[:id])
-    # PendingBrokerMailer.with(user: users).notify_user.deliver_now
+    #PendingBrokerMailer.with(user: users).notify_user.deliver_now
     users.update(status: 'approved', broker_role: 'Broker')
     redirect_to '/dashboard_admin'
   end

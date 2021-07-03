@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
-
 gem 'dotenv-rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'bootstrap', '~> 4.5.2'
@@ -17,11 +16,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'iex-ruby-client'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem 'devise', '~> 4.8'
 gem 'hamlit-rails'
 gem 'will_paginate', '~> 3.1.0'
-
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

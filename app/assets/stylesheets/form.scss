@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  overflow-x: hidden;
+  scrollbar-color: #383d59 #0b132b;
+  scrollbar-width: thin;
+}
+
+.body-bg {
+  position: fixed;
+  top: 0vh;
+  left: 0vw;
+  background-color: #0B132B;
+  height: 100vh;
+  width: 100vw;
+  z-index: -50;
+}
+
+.navbar_admin {
+  opacity: 1;
+  position: fixed;
+  top: -4vh;
+  left: 0vw;
+  background-color: #26223b;
+  height: 12vh;
+  width: 100vw;
+  z-index: 3;
+  transition: 0.5s ease;
+}
+
+.logo {
+  position: fixed;
+  top: 2vh;
+  left: 2vw;
+  width: 14vh;
+  z-index: 5;
+}
+
+.oswald {
+  font-size: 1.5rem;
+  font-family: "Oswald";
+  font-weight: 400;
+  overflow-y: hidden;
+  color: #eaeeff;
+  text-decoration: none;
+  transition: ease 0.2s;
+  text-align: center;
+}
+
+.register_layout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.register_border {
+  display: flex;
+  padding: 1rem 2rem;
+  width: 25vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1vh solid #383d59;
+}
+
+.username {
+  color: #d2a517;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.user_text {
+  font-size: 0.85rem;
+  font-family: "Open Sans";
+  font-weight: 400;
+  overflow-y: hidden;
+  color: #eaeeff;
+  text-decoration: none;
+  transition: ease 0.2s;
+}
+
+.labeltxt {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 1rem;
+  color: #eaeeff;
+}
+
+.textfield {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 0.2vh solid #d2a517;
+  color: #d2a517;
+  margin-bottom: 1rem;
+}
+
+.textfield_transaction {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  border-bottom: 0.2vh solid #d2a517;
+  color: #d2a517;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+
+.registerbtn {
+  margin-top: 1rem;
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-size: 0.9rem;
+  width: 100%;
+  color: #F72C25;
+  padding: 0.75rem 1.5rem;
+  border: 0.5vh solid #F72C25;
+  background-color: rgba(0,0,0,0);
+  border-radius: 12px;
+  transition: ease 0.3s;
+}
+
+.registerbtn:hover {
+  background-color: #F72C25;
+  color: #eaeeff;
+}
+
+.loginlink {
+  color: #d2a517;
+  text-align: center;
+}
+
+.centertxt {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.slide_down {
+  margin-top: 25vh;
+}

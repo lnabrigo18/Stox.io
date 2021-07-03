@@ -1,11 +1,41 @@
-<h1>Login</h1>
+<head>
+  <%= stylesheet_link_tag "form" %>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="navbar_admin"></div>
+  <div class="body-bg"></div>
+  <%= link_to root_path, method: :get do %>
+    <%= image_tag("logotxt.png", :class => "logo") %>
+  <% end %>
+  
+  <div class="register_layout slide_down">
+    <div class="register_border">
+      <h1 class="oswald username">Login</h1>
 
-<%= form_tag '/login' do %>
-  <%= label_tag :username, 'Username', class:'textLabel_user' %> <br>
-  <%= text_field_tag :username, '', class:'textField_user', placeholder: 'Input Username' %> <br>
+      <%= form_tag '/login' do %>
+        <%= label_tag :username, 'Username', class:'labeltxt' %> <br>
+        <%= text_field_tag :username, '', class:'textfield', placeholder: 'Input Username' %> <br>
 
-  <%= label :password, 'Password', class:'textLabel_user' %> <br>
-  <%= password_field_tag :password, '', class:'', placeholder: 'Input Password'  %> <br>
+        <%= label :password, 'Password', class:'labeltxt' %> <br>
+        <%= password_field_tag :password, '', class:'textfield', placeholder: 'Input Password'  %> <br>
 
-  <%= submit_tag 'Login', :class => 'login' %> 
-<% end %>
+        <%= submit_tag 'Login', :class => "registerbtn" %> 
+        
+        <div class="centertxt">
+          <%= link_to "Don't have an account? Sign Up", '/users/new', :class => "loginlink", method: :get %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  
+</body>
