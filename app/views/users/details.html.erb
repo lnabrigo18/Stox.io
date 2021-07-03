@@ -13,7 +13,7 @@
 <body>
   <h1 class="admin_title">Admin Dashboard</h1>
 
-  <%= link_to update_stock_path do %>
+  <%= link_to update_stock_path, data: { confirm: "DANGER DANGER DANGER!!! PLEASE DO NOT UPDATE THE SEEDS. THE PURPOSE OF THIS BUTTON IS TO UPDATE THE SEEDS FOR THE STOCK DATABASE. UPDATING THE SEEDS MAY CRASH THE APP. THIS IS PRODUCTION AND HEROKU MAY NOT BE ABLE TO HANDLE 1000+ SEED UPDATE. ONLY PRESS YES IF YOU CAN FIX IT YOURSELF IF IT CRASHES." } do %>
     <%= image_tag("update.png", :class => "reset icons", :title => "Refresh Seeds") %>
   <% end %>
 
@@ -21,7 +21,7 @@
     <%= image_tag("logotxt.png", :class => "logo", :title => "Back to Dashboard") %>
   <% end %>
   
-  <%= link_to logout_path, method: :get do %>
+  <%= link_to logout_path, method: :get, data: { confirm: "Logout now ?" } do %>
     <%= image_tag("logout.png", :class => "logouticon icons", :title => "Logout") %>
   <% end %>
 
@@ -150,7 +150,7 @@
         <%= f.label :last_name, "Last Name", class:"labeltxt" %>
         <%= f.text_field :last_name, class:"textfield", placeholder: 'Input Last Name', value:@user.last_name %>
 
-        <%= f.submit "UPDATE USER", :class => "update_user" %>
+        <%= f.submit "UPDATE USER", :class => "update_user", data: { confirm: "Update User ?" } %>
       </div>
     <% end %>
   </div>

@@ -45,7 +45,7 @@ class UsersController < ApplicationController
 
   def request_status
     users = User.find_by(id: params[:id])
-    users.update(status: 'pending')
+    users.update(status: 'pending') if users.money >= 30_000
     redirect_to '/dashboard'
   end
 

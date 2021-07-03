@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <%= link_to logout_path, method: :get do %>
+  <%= link_to logout_path, data: { confirm: "Logout now ?" } , method: :get do %>
     <%= image_tag("logout.png", :class => "logouticon icons", :title => "Logout") %>
   <% end %>
 
@@ -159,7 +159,7 @@
     <div class="modal_layout">
       <p class="edit_title">BROKERSHIP REQUIREMENTS</p>
       <p class="modaltxt">User must have a minimum of<br>30,000 $ in their account<br>to apply for brokership.</p>
-      <%= link_to users_request_path(:id => @user.id), :class => "user_link" do %>
+      <%= link_to users_request_path(:id => @user.id), data: { confirm: "Are you sure you want to apply for brokership?" }, :class => "user_link" do %>
         <h4 class="update_user">Apply Now</h4>
       <% end %>
     </div>
@@ -173,7 +173,7 @@
         <%= f.label :money, "Amount", class:"labeltxt" %>
         <%= f.number_field :money, class:"textfield", placeholder: '00.00 $', value: "", :required => true %>
 
-        <%= f.submit "ADD MONEY", :class => "update_user" %>
+        <%= f.submit "ADD MONEY", :class => "update_user", data: { confirm: "Proceed with Transaction ?" } %>
       </div>
     <% end %>
   </div>

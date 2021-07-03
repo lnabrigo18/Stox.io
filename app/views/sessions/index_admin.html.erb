@@ -15,11 +15,11 @@
   <div class="navbar_admin"></div>
   <h1 class="admin_title">Admin Dashboard</h1>
 
-  <%= link_to update_stock_path do %>
+  <%= link_to update_stock_path, data: { confirm: "DANGER DANGER DANGER!!! PLEASE DO NOT UPDATE THE SEEDS. THE PURPOSE OF THIS BUTTON IS TO UPDATE THE SEEDS FOR THE STOCK DATABASE. UPDATING THE SEEDS MAY CRASH THE APP. THIS IS PRODUCTION AND HEROKU MAY NOT BE ABLE TO HANDLE 1000+ SEED UPDATE. ONLY PRESS YES IF YOU CAN FIX IT YOURSELF IF IT CRASHES." } do %>
     <%= image_tag("update.png", :class => "reset icons", :title => "Refresh Seeds") %>
   <% end %>
 
-  <%= link_to logout_path, method: :get do %>
+  <%= link_to logout_path, data: { confirm: "Logout now ?" }, method: :get do %>
     <%= image_tag("logout.png", :class => "logouticon icons", :title => "Logout") %>
   <% end %>
   
@@ -49,7 +49,7 @@
               
               <h4 class="user_text"><%= t.email %></h4>
 
-              <%= link_to approve_path(:id => t.id), :class => "user_link" do %>
+              <%= link_to approve_path(:id => t.id), data: { confirm: "Approve User for Brokership ?" }, :class => "user_link" do %>
                 <h4 class="user_text approve" title="Approve User">APPROVE</h4>
               <% end %>
             </div>

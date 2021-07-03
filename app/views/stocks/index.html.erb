@@ -11,7 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
-  <%= link_to logout_path, method: :get do %>
+  <%= link_to logout_path, data: { confirm: "Logout now ?" }, method: :get do %>
     <%= image_tag("logout.png", :class => "logouticon icons", :title => "Logout") %>
   <% end %>
 
@@ -70,7 +70,7 @@
         <%= f.label :money, "Amount", class:"labeltxt" %>
         <%= f.number_field :money, class:"textfield", placeholder: '00.00 $', value: "", :required => true %>
 
-        <%= f.submit "ADD MONEY", :class => "update_user" %>
+        <%= f.submit "ADD MONEY", :class => "update_user", data: { confirm: "Proceed with Transaction ?" } %>
       </div>
     <% end %>
   </div>
