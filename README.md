@@ -1,3 +1,7 @@
+ADMIN ACCOUNT USERNAME AND PASSWORD
+USERNAME : admin
+PASSWORD : admin12345
+
 # Hi there 👋
 
 This repo serves as the main repo for our Rails Projects. 
