@@ -22,8 +22,10 @@ Rails.application.routes.draw do
       post 'add_buyer_stock', to: "stocks#add_buyer_stock"
     end
   end
+
   get 'search-stock', to: 'stocks#search'
   get 'update-stock', to: 'stocks#update_stock'
   post 'transaction_buy', to: 'stocks#transaction_buy'
   post 'transaction_sell', to: 'stocks#transaction_sell'
+  resources :broker_stocks
 end
